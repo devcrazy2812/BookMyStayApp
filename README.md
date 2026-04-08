@@ -11,116 +11,163 @@ The platform simulates a real-world booking system with features like:
 
 ---
 
-## 🚀 Features
+## 📂 Initial Setup
 
-### 👤 User Features
-- 🔐 User Registration & Login  
-- 🔍 Search hotels by location, date, and preferences  
-- 📋 View hotel details (price, amenities, availability)  
-- 🛏 Book rooms easily  
-- 📅 View & manage bookings  
+### 🔹 Step 1: Create Local Folder
+- Create a folder in Documents  
+- Folder name = **Your Full Roll Number**
 
 ---
 
-### 🏢 Admin Features
-- ➕ Add / Update hotel listings  
-- 🗑 Delete hotels  
-- 📊 Manage bookings and users  
-- 📈 Dashboard for monitoring activity  
+### 🔹 Step 2: Create GitHub Repository
+- Repository Name: **BookMyStayApp**
+- Enable:
+  - ✅ README file (**Mandatory**)
 
 ---
 
-## 🛠️ Tech Stack
-
-### Frontend
-- HTML  
-- CSS  
-- JavaScript  
-
-### Backend
-- Node.js  
-- Express.js  
-
-### Database
-- MongoDB  
-
-### Tools
-- Git & GitHub  
-- Postman  
-
----
-
-## 📂 Project Structure
-```
-BookMyStayApp/
-│── frontend/
-│── backend/
-│── models/
-│── routes/
-│── controllers/
-│── config/
-│── README.md
-```
-
----
-
-## ⚙️ Installation & Setup
-
-### 1️⃣ Clone the Repository
+### 🔹 Step 3: Clone Repository
 ```bash
-git clone https://github.com/devcrazy2812/BookMyStayApp.git
+git clone <repository_link>
 cd BookMyStayApp
 ```
 
 ---
 
-### 2️⃣ Install Dependencies
+## 💻 Project Setup (IntelliJ)
+
+### 🔹 Step 4: Open Project
+- Open IntelliJ  
+- Select **Open Project**
+- Choose your cloned folder  
+
+---
+
+### 🔹 Step 5: Create Module
+- Create new module: **App**
+- Uncheck: Add sample code  
+
+---
+
+### 🔹 Step 6: Create Java Class
+- Inside `src/`
+- Create class:
+```java
+BookMyStayApp
+```
+
+---
+
+## 🌿 Git Branching Workflow
+
+### 🔹 Step 7: Create Dev Branch
 ```bash
-npm install
+git checkout -b dev
+git push origin dev
 ```
 
 ---
 
-### 3️⃣ Setup Environment Variables
-Create a `.env` file and add:
-
-```env
-PORT=5000
-MONGO_URI=your_mongodb_connection
-JWT_SECRET=your_secret_key
-```
-
----
-
-### 4️⃣ Run the Application
+### 🔹 Step 8: Create Feature Branch
 ```bash
-npm start
+git checkout -b feature/UC1-WelcomePage
 ```
 
 ---
 
-## 🌐 API Endpoints (Sample)
-
-### User
-- POST /auth/signup → Register user  
-- POST /auth/login → Login  
-
-### Hotels
-- GET /hotels → Get all hotels  
-- GET /hotels/:id → Get hotel details  
-
-### Booking
-- POST /bookings → Create booking  
-- GET /bookings → Get user bookings  
+### 🔹 Step 9: Implement Use Case
+- Write logic inside:
+```java
+BookMyStayApp.java
+```
 
 ---
 
-## 📊 Key Concepts Used
-- REST API Design  
-- Authentication & Authorization  
-- CRUD Operations  
-- MVC Architecture  
-- Database Integration  
+### 🔹 Step 10: Commit Changes
+```bash
+git add .
+git commit -m "[Your Name] Added UC1-WelcomePage"
+git push origin feature/UC1-WelcomePage
+```
+
+---
+
+## 🔀 Pull Request Process
+
+### 🔹 Step 11: Create Pull Request
+- Go to GitHub  
+- Click **Compare & Pull Request**
+
+### 🔹 Important:
+- Change base branch:
+```
+main ❌ → dev ✅
+```
+
+### 🔹 Step 12: Merge PR
+- Create Pull Request  
+- Merge Pull Request  
+- Confirm Merge  
+
+---
+
+## ⚠️ Important Rules
+
+❌ Do NOT merge `dev` into `main`  
+❌ Do NOT create PR from dev → main  
+
+✔ Always merge:
+```
+feature branch → dev
+```
+
+---
+
+## 🔄 Continue Development
+
+### 🔹 Step 13: Switch to Dev
+```bash
+git checkout dev
+```
+
+### 🔹 Step 14: Pull Latest Code
+```bash
+git pull origin dev
+```
+
+---
+
+## 🔁 Repeat for Next Use Cases
+
+For each new use case:
+1. Create new branch:
+```bash
+git checkout -b feature/UCx-Name
+```
+2. Implement code  
+3. Commit & Push  
+4. Create PR → Merge into dev  
+
+---
+
+## 🧠 Key Concepts
+
+- Git Branching Strategy  
+- Feature-based development  
+- Pull Request workflow  
+- Version control best practices  
+
+---
+
+## 📌 Summary Workflow
+
+```
+main (stable)
+   ↑
+dev (integration branch)
+   ↑
+feature/UCx (development)
+```
 
 ---
 
